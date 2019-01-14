@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="page"
+             x:Class="CognitiveExample.Views.Cognitive.SpeechRecognition">
+    <ContentPage.Content>
+        <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+            <Label Text="Speech Service"/>
+            <Editor x:Name="txtOutput" Placeholder="Resultado" AutoSize="TextChanges" IsEnabled="False"/>
+            <ActivityIndicator HorizontalOptions="Center" IsRunning="{Binding Source={x:Reference page}, Path=IsProcessing}"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Image="record.png" Clicked="OnRecognizeSpeechButtonClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

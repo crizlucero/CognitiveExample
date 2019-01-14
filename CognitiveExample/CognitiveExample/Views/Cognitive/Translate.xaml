@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="Page"
+             x:Class="CognitiveExample.Views.Cognitive.Translate">
+    <ContentPage.Content>
+        <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+            <Label Text="Translate"/>
+            <Editor x:Name="txtInput" Placeholder="Texto a traducir" AutoSize="TextChanges"/>
+            <Editor x:Name="txtOutput" Placeholder="Text traducido" AutoSize="TextChanges"/>
+            <ActivityIndicator HorizontalOptions="Center" IsRunning="{Binding Source={x:Reference Page}, Path=IsRunning}"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Image="translate.png" Clicked="OnTranlsateButtonClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
